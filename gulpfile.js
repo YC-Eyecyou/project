@@ -3,10 +3,11 @@ let uglify = require("gulp-uglify");//压缩模块
 let babel = require("gulp-babel");//ES6编译模块
 let cleancss = require("gulp-clean-css");//压缩CSS
 let webserver = require("gulp-webserver");
+let sass = require("gulp-sass");//编译scss到css
 
-gulp.task("copy",()=>{//复制
-	gulp.src("./src/**/*.*").pipe(gulp.dest("./dist"))
-})
+// gulp.task("copy",()=>{//复制
+// 	gulp.src("./src/**/*.*").pipe(gulp.dest("./dist"))
+// })
 
 gulp.task("buildJS",()=>{
 	gulp.src("./src/**/*.js")//读取文件
@@ -27,13 +28,26 @@ gulp.task("buildHTML",()=>{
 })
 
 gulp.task("buildCSS",()=>{
-	gulp.src("./src/**/*.css")
-		.pipe(cleancss())
+	gulp.src("./src/**/*.scss")
+		// .pipe(cleancss())
+		.pipe(sass())
 		.pipe(gulp.dest("./dist"));
 })
 
-gulp.task('webserver', function() {
-  	gulp.src('src')
+//静态资源
+gulp.task("buildStaticResource",()=>{
+	gulp.src("./src/static/**/*.*").pipe(gulp.dest("./dist"));
+})
+
+//监听
+gulp.task("watching",()=>{
+	gulp.watch("./src/**/*.scss",["buildCSS"]);
+	gulp.watch("./src/**/*.js",["buildJS"]);
+	gulp.watch("./src/**/*.html",["buildHTML"]);
+})
+
+gulp.task('webserver',["watching"], function() {
+  	gulp.src('dist')
     	.pipe(webserver({
     		livereload: true,
     		directoryListing: true,
@@ -42,10 +56,10 @@ gulp.task('webserver', function() {
     		proxies: [
     			{
     				source: '/test', 
-    				target: 'https://m.lagou.com/listmore.json'
+    				target: 'https://bmall.163.com/webShop/index/listItem'
     			}
     		]
     	}));
 });
 
-gulp.task("build",["buildJS","buildHTML","buildCSS"])
+gulp.task("build",["buildJS","buildHTML","buildCSS","buildStaticResource"])

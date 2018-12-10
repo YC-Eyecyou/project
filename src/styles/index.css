@@ -1,2 +1,50 @@
-*{margin:0;padding:0;}
-#box{width:400px;height:300px;margin:50px auto;background:#ccc;color:#f99;}
+html,body{background:url(../images/bg-main.png)}
+
+.margin{width:1090px;margin:0 auto;}
+
+#top{height:30px;background:rgba(0,0,0,.2);font:12px/30px "";color:#7f93a9;}
+#top .top-left{float:left;}
+#top .top-left .top-title{float:left;}
+#top .top-left .top-notice{float:left;height:30px;color:#00aeff;background:url(../images/top-notice.png) no-repeat left;overflow:hidden;margin-left:15px;text-indent:20px;}
+#top .top-left ul{}
+#top .top-left ul li{}
+#top .top-right{float:right;}
+#top .top-right ul{}
+#top .top-right ul li{float:left;height:30px;cursor:pointer;}
+#top .top-right ul li .menu-item{line-height:14px;padding:0 10px;border-right:1px solid #7a92ac;}
+#top .top-right ul li .top-services{background:url(../images/top-up.png) no-repeat right;background-size:10px;padding-right:20px;}
+
+header{height:150px;}
+header .logo{float:left;margin-top:40px;}
+header .search{float:right;padding:65px 60px 0 0;position:relative;}
+header .search .txt{background:none;border:none;border-bottom:1px solid #33669b;width:250px;height:20px;padding:0 10px;font:12px/20px "";color:#c9d8e6;}
+header .search .header-search{height:18px;position:absolute;left:270px;top:68px;right:-18px;cursor:pointer;}
+header .search .header-cart{height:18px;position:absolute;left:310.297px;top:68px;right:-60px;cursor:pointer;}
+header .search .cart-count{width:20px;height:20px;border-radius:50%;background:#ed871d;font:12px/20px "";color:#fff;position:absolute;left:324px;top:56px;right:-74px;text-align:center;}
+
+nav{height:42px;background:#344a71 url(../images/bg-main.png) repeat fixed top;font:15px/42px "";}
+nav .mask{background:rgba(0,0,0,.2);height:40px;}
+nav ul{}
+nav ul li{float:left;margin-right:80px;cursor:pointer;}
+nav ul li a{color:#cfd2d7;padding-bottom:4px;}
+nav ul li:nth-child(1) a{border-bottom:1px solid #00aeff;color:#00aeff;}
+
+#banner{height:420px;cursor:pointer;}
+
+main{}
+main .home-game-list{margin-top:50px;}
+main .home-game-list ul{display:flex;justify-content:space-between;}
+main .home-game-list ul li{width:150.714px;height:80px;position:relative;box-sizing: border-box;background: #012a60;margin-right: 5px;border: 1px solid #264770;text-align:center;}
+main .home-game-list ul li img{height:48px;margin-top:16px;}
+main .home-game-list ul li span{position:absolute;top:0;left:0;text-align:center;background:rgba(0,17,37,.8);width: 100%;height: 78px;font:16px/80px "";color: #fff;display:none;}
+
+main .home-hot{margin-top:60px;}
+main .home-hot .title{background:url(../images/home-hot.png) no-repeat left;padding-left:48px;margin-bottom: 35px;}
+main .home-hot .title span{font:30px/30px "";color:#fff;}
+main .home-hot-goods{height:380px;box-sizing:border-box;display:flex;justify-content:space-between;}
+main .home-hot-goods .home-hot-goods-l{width:325px;height:370px;margin-right:11px;}
+main .home-hot-goods .home-hot-goods-r{}
+main .home-hot-goods .home-hot-goods-r .home-hot-goods-r-1{float:left;width:370px;height:180px;margin-right:11px;margin-bottom:9px;}
+main .home-hot-goods .home-hot-goods-r .home-hot-goods-r-2{float:left;width:370px;height:180px;margin-bottom:9px;}
+main .home-hot-goods .home-hot-goods-r .home-hot-goods-r-3{float:left;width:370px;height:180px;margin-right:11px;}
+main .home-hot-goods .home-hot-goods-r .home-hot-goods-r-4{float:left;width:370px;height:180px;}
