@@ -1,1 +1,173 @@
-*{margin:0;padding:0}#box{width:400px;height:300px;margin:50px auto;background:#ccc}
+html, body {
+  background: url(../images/bg-main.png); }
+
+div.margin {
+  width: 1090px;
+  margin: 0 auto; }
+
+div#top {
+  height: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  font: 12px/30px "";
+  color: #7f93a9; }
+  div#top div.top-left {
+    float: left; }
+    div#top div.top-left span.top-title {
+      float: left; }
+    div#top div.top-left span.top-notice {
+      float: left;
+      height: 30px;
+      color: #00aeff;
+      background: url(../images/top-notice.png) no-repeat left;
+      overflow: hidden;
+      margin-left: 15px;
+      text-indent: 20px; }
+  div#top div.top-right {
+    float: right; }
+    div#top div.top-right ul li {
+      float: left;
+      height: 30px;
+      cursor: pointer; }
+      div#top div.top-right ul li span.menu-item {
+        line-height: 14px;
+        padding: 0 10px;
+        border-right: 1px solid #7a92ac; }
+      div#top div.top-right ul li span.top-services {
+        background: url(../images/top-up.png) no-repeat right;
+        background-size: 10px;
+        padding-right: 20px; }
+
+header {
+  height: 150px; }
+  header a.logo {
+    float: left;
+    margin-top: 40px; }
+  header div.search {
+    float: right;
+    padding: 65px 60px 0 0;
+    position: relative; }
+    header div.search input.txt {
+      background: none;
+      border: none;
+      border-bottom: 1px solid #33669b;
+      width: 250px;
+      height: 20px;
+      padding: 0 10px;
+      font: 12px/20px "";
+      color: #c9d8e6; }
+    header div.search img.header-search {
+      height: 18px;
+      position: absolute;
+      left: 270px;
+      top: 68px;
+      right: -18px;
+      cursor: pointer; }
+    header div.search img.header-cart {
+      height: 18px;
+      position: absolute;
+      left: 310.297px;
+      top: 68px;
+      right: -60px;
+      cursor: pointer; }
+    header div.search span.cart-count {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #ed871d;
+      font: 12px/20px "";
+      color: #fff;
+      position: absolute;
+      left: 324px;
+      top: 56px;
+      right: -74px;
+      text-align: center; }
+
+nav {
+  height: 42px;
+  background: #344a71 url(../images/bg-main.png) repeat fixed top;
+  font: 15px/42px ""; }
+  nav div.mask {
+    background: rgba(0, 0, 0, 0.2);
+    height: 40px; }
+  nav ul li {
+    float: left;
+    margin-right: 80px;
+    cursor: pointer; }
+    nav ul li a {
+      color: #cfd2d7;
+      padding-bottom: 4px; }
+    nav ul li:nth-child(1) a {
+      border-bottom: 1px solid #00aeff;
+      color: #00aeff; }
+
+section#banner {
+  height: 420px;
+  cursor: pointer; }
+
+main div.home-game-list {
+  margin-top: 50px; }
+  main div.home-game-list ul {
+    display: flex;
+    justify-content: space-between; }
+    main div.home-game-list ul li {
+      width: 150.714px;
+      height: 80px;
+      position: relative;
+      box-sizing: border-box;
+      background: #012a60;
+      margin-right: 5px;
+      border: 1px solid #264770;
+      text-align: center; }
+      main div.home-game-list ul li img {
+        height: 48px;
+        margin-top: 16px; }
+      main div.home-game-list ul li span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        background: rgba(0, 17, 37, 0.8);
+        width: 100%;
+        height: 78px;
+        font: 16px/80px "";
+        color: #fff;
+        display: none; }
+
+main div.home-hot {
+  margin-top: 60px; }
+  main div.home-hot div.title {
+    background: url(../images/home-hot.png) no-repeat left;
+    padding-left: 48px;
+    margin-bottom: 35px; }
+    main div.home-hot div.title span {
+      font: 30px/30px "";
+      color: #fff; }
+  main div.home-hot div.home-hot-goods {
+    height: 380px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; }
+    main div.home-hot div.home-hot-goods div.home-hot-goods-l {
+      width: 325px;
+      height: 370px;
+      margin-right: 11px; }
+    main div.home-hot div.home-hot-goods div.home-hot-goods-r span.home-hot-goods-r-1 {
+      float: left;
+      width: 370px;
+      height: 180px;
+      margin-right: 11px;
+      margin-bottom: 9px; }
+    main div.home-hot div.home-hot-goods div.home-hot-goods-r span.home-hot-goods-r-2 {
+      float: left;
+      width: 370px;
+      height: 180px;
+      margin-bottom: 9px; }
+    main div.home-hot div.home-hot-goods div.home-hot-goods-r span.home-hot-goods-r-3 {
+      float: left;
+      width: 370px;
+      height: 180px;
+      margin-right: 11px; }
+    main div.home-hot div.home-hot-goods div.home-hot-goods-r span.home-hot-goods-r-4 {
+      float: left;
+      width: 370px;
+      height: 180px; }

@@ -37,6 +37,7 @@ gulp.task("buildCSS",()=>{
 //静态资源
 gulp.task("buildStaticResource",()=>{
 	gulp.src("./src/static/**/*.*").pipe(gulp.dest("./dist"));
+	gulp.src("./src/images/**/*.*").pipe(gulp.dest("./dist/images"));
 })
 
 //监听
