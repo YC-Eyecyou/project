@@ -11,7 +11,7 @@ define(["jquery"], function(){
 			return ele.offsetTop + getPagePositionTop(ele.offsetParent);
 		},
 		randomColor: function(){
-			return `rgb( ${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255} )`;
+			return "rgb(" + "Math.random()*255" + "," + "Math.random()*255" + "," + "Math.random()*255" + ")";
 		},
 		randomInt : function(min, max) {
 			return Math.round( Math.random()*(max-min) ) + min;

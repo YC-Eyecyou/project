@@ -5,6 +5,7 @@ requirejs.config({
 		"common" : "common",
 		"swiper" : "swiper",
 		"test_a" : "test_a",
-		"test_b" : "test_b"
+		"test_b" : "test_b",
+		"top-notice" : "top-notice",
 	}
 })

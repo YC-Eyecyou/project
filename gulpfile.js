@@ -56,7 +56,7 @@ gulp.task('webserver',["watching"], function() {
     		proxies: [
     			{
     				source: '/test', 
-    				target: 'https://bmall.163.com/webShop/index/listItem'
+    				target: 'http://bmall.163.com/webShop/noticePosition/find?1544530093758&position=1'
     			}
     		]
     	}));
