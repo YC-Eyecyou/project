@@ -1,0 +1,149 @@
+html, body {
+  background: #efefef; }
+
+div.margin {
+  width: 1000px;
+  margin: 0 auto; }
+
+header {
+  height: 130px; }
+  header a.logo {
+    float: left;
+    width: 300px;
+    height: 60px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-top: 35px; }
+  header div.header-r {
+    float: right;
+    height: 60px;
+    font: 18px/60px "";
+    margin-top: 35px;
+    color: #666666; }
+    header div.header-r a {
+      color: #ca5252; }
+
+main {
+  position: relative;
+  width: 1000px;
+  padding-bottom: 55px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 3px 3px #cbc9c9; }
+  main div.main-t {
+    width: 320px;
+    margin: 0 auto;
+    padding-top: 44px;
+    padding-bottom: 24px; }
+    main div.main-t div.nomal {
+      width: 158px;
+      background: #ca5252;
+      border: solid 1px #ca5252;
+      border-right: 0;
+      height: 38px;
+      text-align: center;
+      font: 16px/38px "";
+      color: #fff;
+      float: left; }
+    main div.main-t a.special {
+      display: block;
+      width: 158px;
+      border: solid 1px #ccc;
+      border-left: 0;
+      height: 38px;
+      text-align: center;
+      font: 16px/38px "";
+      color: #666;
+      float: right;
+      position: relative; }
+      main div.main-t a.special p {
+        width: 26px;
+        height: 12px;
+        border-radius: 2px;
+        font-size: 9px;
+        line-height: 9px;
+        color: #fff;
+        background: #ca5252;
+        position: absolute;
+        top: 4px;
+        right: 12px; }
+  main div.main-m form.register div.u-input {
+    height: 72px; }
+    main div.main-m form.register div.u-input span {
+      float: left;
+      width: 340px;
+      text-align: right;
+      margin-top: 12px;
+      font: 16px/45px "";
+      color: #333; }
+    main div.main-m form.register div.u-input input.shuru {
+      float: left;
+      height: 44px;
+      width: 320px;
+      margin-top: 12px;
+      border: solid 1px #ddd;
+      font: 16px/44px "";
+      color: #333;
+      text-indent: 0.5em; }
+  main div.main-m form.register div.national-ph {
+    height: 22px; }
+    main div.main-m form.register div.national-ph a {
+      font: 12px/22px "";
+      color: #4cb5ff; }
+  main div.main-m form.register div.forget-pw {
+    height: 22px; }
+    main div.main-m form.register div.forget-pw p {
+      font: 12px/22px "";
+      color: #999; }
+  main div.main-m form.register div.ph-ver input.shuru {
+    width: 190px; }
+  main div.main-m form.register div.ph-ver a {
+    float: left;
+    height: 46px;
+    width: 120px;
+    text-align: center;
+    font: 16px/46px "";
+    color: #fff;
+    margin: 12px 0 0 10px;
+    background: #2c82ff; }
+  main div.main-m form.register div.btn-register {
+    height: 58px; }
+    main div.main-m form.register div.btn-register div {
+      float: left;
+      width: 322px;
+      height: 46px;
+      margin-top: 12px;
+      background-color: #ca5252;
+      text-align: center;
+      font: 18px/46px "";
+      color: #fff;
+      cursor: pointer; }
+  main div.main-m form.register div.check p {
+    float: left;
+    margin-top: 5px;
+    width: 322px;
+    font: 12px/26px "";
+    color: #b1b1b1; }
+    main div.main-m form.register div.check p input.check {
+      margin-top: 5px;
+      cursor: pointer;
+      float: left;
+      width: 14px;
+      height: 14px;
+      border: 1px solid #ccc;
+      background: #fff; }
+    main div.main-m form.register div.check p a {
+      color: #b1b1b1; }
+
+footer div.content {
+  padding: 30px 0; }
+  footer div.content p {
+    font: 12px/23px "";
+    color: #b1b1b1;
+    text-align: center; }
+    footer div.content p a {
+      padding: 0 6px;
+      color: #b1b1b1; }
+      footer div.content p a:hover {
+        color: #ee8c18; }

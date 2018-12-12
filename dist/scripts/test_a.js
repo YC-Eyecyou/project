@@ -1,1 +1,1 @@
-"use strict";define(["common"],function(){console.log("test_a ok")});
+"use strict";define(["common"],function(){$.ajax({url:"https://localhost:8000/test?1544530093758&position=1",success:function(o){console.log(o)}})});

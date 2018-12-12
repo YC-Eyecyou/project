@@ -1,1 +1,1 @@
-"use strict";require(["../scripts/config.js"],function(){require(["common","jquery","swiper","top-notice"],function(o,e,i,n){console.log("index ok")})});
+"use strict";require(["../scripts/config.js"],function(){require(["jquery","swiper","test_a"],function(e,i,r){console.log("index ok")})});

@@ -37,6 +37,7 @@ gulp.task("buildCSS",()=>{
 //静态资源
 gulp.task("buildStaticResource",()=>{
 	gulp.src("./src/static/**/*.*").pipe(gulp.dest("./dist"));
+	// gulp.src("./src/images/**/*.*").pipe(gulp.dest("./dist/images"));
 })
 
 //监听
@@ -56,7 +57,7 @@ gulp.task('webserver',["watching"], function() {
     		proxies: [
     			{
     				source: '/test', 
-    				target: 'http://bmall.163.com/webShop/noticePosition/find?1544530093758&position=1'
+    				target: 'http://bmall.163.com/webShop/noticePosition/find'
     			}
     		]
     	}));
