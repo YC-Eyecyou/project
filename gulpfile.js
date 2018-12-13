@@ -10,12 +10,19 @@ let sass = require("gulp-sass");//编译scss到css
 // })
 
 gulp.task("buildJS",()=>{
-	gulp.src("./src/**/*.js")//读取文件
+	//只复制
+	gulp.src("./src/scripts/libs/*.js")
+		.pipe( gulp.dest("./dist/scripts/libs") );
+	//编译压缩复制
+	gulp.src("./src/scripts/*.js")
 		.pipe(babel({
-            presets: ['env']
-        }))//ES6编译
-        .pipe(uglify())//压缩
-		.pipe(gulp.dest("./dist"))//写入dist文件
+			presets: ['env']
+		}))//ES6编译
+		.pipe( uglify() )//压缩
+		.pipe( gulp.dest("./dist/scripts") );
+	//页面js	
+	gulp.src("./src/pages/*.js")
+		.pipe(gulp.dest("./dist/pages"));
 })
 
 gulp.task("buildHTML",()=>{
@@ -36,7 +43,7 @@ gulp.task("buildCSS",()=>{
 
 //静态资源
 gulp.task("buildStaticResource",()=>{
-	gulp.src("./src/static/**/*.*").pipe(gulp.dest("./dist"));
+	gulp.src("./src/static/**/*.*").pipe(gulp.dest("./dist/static"));
 	// gulp.src("./src/images/**/*.*").pipe(gulp.dest("./dist/images"));
 })
 
@@ -59,7 +66,13 @@ gulp.task('webserver',["watching"], function() {
     				source: '/test', 
     				target: 'http://bmall.163.com/webShop/noticePosition/find'
     			}
-    		]
+    		],
+			proxies: [
+				{
+					source: '/nav', 
+					target: 'http://bmall.163.com/webShop/category/list'
+				}
+			]
     	}));
 });
 

@@ -4,7 +4,7 @@ html,body{
 	background-size: auto 100%;
 }
 
-div.margin{
+.margin{
 	width:1090px;margin:0 auto;
 }
 
@@ -14,20 +14,32 @@ div#top{
 	color:#7f93a9;
 	div.top-left{
 		float:left;
+		width:400px;
+		height:30px;
 		span.top-title{
 			float:left;
 		}
 		span.top-notice{
 			float:left;
+			width:188px;
 			height:30px;
 			color:#00aeff;
 			background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAABBklEQVQokZXSvyuFURzH8dd5shJZKBaDweRXKUaK9awyyG6w3VIGpZj9CzIwnNUNfwApZTBYDBSDIovNMdznyeNeJe/1+3l3zvmeT8g5ayckAcvYxnGOGvV58YuwgCscYBAD7ZmiFh4PSROneMM0LstZT0g2QtINXSF5RW/p3mApR80yXNGPLayFZK4ohV0sYKIS6uToHjMYxmZ1vYscnefos2Mr3+Id9rHcsYg/uMXQf6UxPFbSTEjmQ+r8goqQjGIdh4XWehs4w3VIFn8RRnCBB+wUOerLUcAEnnESkvOQTNW8F612zOboPbTXqGzEHibxgaMcrdYzHW/I0ZlWG1bwVJ7+gy+ZfkrBIoCMRwAAAABJRU5ErkJggg==) no-repeat left;
 			overflow:hidden;
 			margin-left:15px;
 			text-indent:20px;
-		}
-		ul{
-			li{}
+			position:relative;
+			
+			ul{
+				position:absolute;
+				
+				li{
+					a{
+						display:block;
+						color:#00aeff;
+					}
+				}
+			}
 		}
 	}
 	div.top-right{
@@ -37,6 +49,7 @@ div#top{
 				float:left;
 				height:30px;
 				cursor:pointer;
+				
 				span.menu-item{
 					line-height:14px;
 					padding:0 10px;
@@ -46,6 +59,56 @@ div#top{
 					background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAUCAYAAABxnDbHAAABk0lEQVRIibXTSWsUYRAG4McheJgQhiBxQfAaQnBfICRDIDeviqKg4I5CRMFDDv4DDwqCEjdQFDRu4IZg1J/jWfA2OomHVEtTZmRmnKnb91Z99TR095r5hUVd1Gbcwxl86/RypQtwE75gP75iY7/RDQGOxnk04PX9QkcCHEv5WMAjvUYLcLxFfxyf24XbQddhEVtT/j2dt+FTzP8XOhzg9pS/xxZ8SPmOgIe7RWsB7kz5GxzEDxzA29TfFXCtU7QAd6f8FQ6jEecGDuF1mtvzL3g1tIaP2JvyFzhSAotqRP4y5ftiz19wRoesvKeJlD/FUfxa7cnxM+BnKZ+IfUOt0MEYmEwXH+M4mi3Aopo4hicpn4y9gxmtRqOeLjzEyTbAMnwCj1Jej/3VAq3iHabT4H2c7gAsw6fwIOXT4VQreI6ZNHAH57DUIVjUEs7ibspnsFDBVGrcwgUsdwkWtYzzuJ3yev56b+JiD8AyPBt7/1QZvY5LPQTL8OXYDwawFtcw12Msw1es/OezA7iBq30EyzWH5m9ivFOVzkDz2QAAAABJRU5ErkJggg==) no-repeat right;
 					background-size:10px;
 					padding-right:20px;
+				}
+				
+				&:last-child{//客服服务
+					position: relative;
+					
+					&:hover{//鼠标滑过上箭头变下箭头
+						
+						span.top-services{
+							background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAUCAYAAABxnDbHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkNDOTZCRERCODY2RjExRThBMTc2RkJDMkYxM0VBQjE2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkNDOTZCRERDODY2RjExRThBMTc2RkJDMkYxM0VBQjE2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Q0M5NkJERDk4NjZGMTFFOEExNzZGQkMyRjEzRUFCMTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Q0M5NkJEREE4NjZGMTFFOEExNzZGQkMyRjEzRUFCMTYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6iM8D5AAABoklEQVR42ryUOUsDURSFX6KmE/xNbiBu4C4oCoqCoqKFjbWChaAgGBQXUHBDWwtBCBoC7gsiaW3cCCGETKGFnis3MBwSMxPGXPgS5rw798ubzIwvuHs8bYyZMoWrGT8+xsFsgYTiGRPpJ5gEc/8o8+l88Xz5bQsTYEEbvBbO6/zfKqaGUVAERsC3R8JFMGQPZadn1DgMljzYsZwfZCHqVKRt4IQWBsGy/qh8Ss5bAQOUi6ddFi1QD0LU0A9W9XK7KelfA32Uh9RjpXci4lrZOjX2gnUXYunbAD18SXW+ZejypXQhTCd0g00HYlnfAl2Uh3Vuyn7t7ZXUhgjlnWA7w92erhKwAzooj+i8JP/hXAlQAy4ob9XBAcoDmrdQfq5zEpnuMpNFXAWuKG8GezaxfO+DJuq7BNWZhCbHI5EW31DeCA5AKTgEDbR+/ZfQOHgO4yq+o7wOPOv/Za9bFcZzPcS5KqbiB8rL6PhehTEnbw4n9QEqwGOWdckrtc94JbWLnyiX43KnQpPHu/VNxVE9jqrw3e2L2W29qPhIha9uB/wIMABq4Fljm4AkogAAAABJRU5ErkJggg==) no-repeat right;
+							background-size:10px;
+							padding-right:20px;
+						}
+					}
+					
+					ul{//下拉框
+						display: none;
+						position: absolute;
+						top: 30px;
+						left: 0;
+						background: rgba(0,0,0,.5);
+						list-style: none;
+						border: 1px solid #374254;
+						width: 87px;
+						z-index: 5000;
+						
+						li{
+							text-align: center;
+							border-bottom: 1px solid #374254;
+							width: 87px;
+							height: 30px;
+							line-height: 30px;
+							
+							a{
+								color:#7f93a9;
+							}
+						}
+					}
+					&:hover{//划过客服服务显示下拉框
+						ul{
+							display:block;
+							
+							li{
+								&:hover{//划过下拉框li变色
+									a{
+										color:#fff;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -109,24 +172,88 @@ header{
 nav{
 	height:42px;
 	background:#344a71 url(https://yanxuan-static.nosdn.127.net/hxm/b2c-web/p/20150730/static/media/bg-main.531304ac.png) repeat fixed top;
-	font:15px/42px "";
+	font:700 15px/42px "";
+	
 	div.mask{
 		background:rgba(0,0,0,.2);
 		height:40px;
+		position:relative;
 	}
-	ul{
-		li{
+	ul.nav-list{
+		height:42px;
+		
+		li.nav-item{
 			float:left;
+			height:42px;
 			margin-right:80px;
-			cursor:pointer;
-			a{
+			overflow:hidden;
+			
+			a.nav-item-link{
 				color:#cfd2d7;
 				padding-bottom:4px;
+				position:relative;
+				
+				i{//小三角
+					display:block;
+					position: absolute;
+					display: none;
+					bottom: -8px;
+					left: 35%;
+					border: 7px solid transparent;
+					border-bottom-color: rgba(0,0,0,.5);
+				}
 			}
 			&:nth-child(1){
-				a{border-bottom:1px solid #00aeff;color:#00aeff;}
+				a.nav-item-link{border-bottom:1px solid #00aeff;color:#00aeff;}
 			} 
+			&:hover{
+				a.nav-item-link{
+					border-bottom:1px solid #00aeff;color:#00aeff;
+					i{display:block;}
+				}
+				div.sec-nav{display:block;}
+			}
+			div.sec-nav{//隐藏的二级分类栏
+				background: rgba(0,0,0,.8);
+				width: 100%;
+				position: absolute;
+				top: 40px;
+				left: 0;
+				border-bottom: 1px solid #373c50;
+				display: none; 
 				
+				ul{
+					width:1000px;
+					padding: 30px 45px 0;
+					font-size: 14px;
+					color: #b8bcbf;
+					
+					li{//二级分类项
+						display: inline-block;
+						text-align: center;
+						height: 65px;
+						width: 65px;
+						margin-right: 68px;
+						margin-bottom: 25px;
+						cursor: pointer;
+						
+						a{//二级分类项链接
+							display:block;
+							
+							img{
+								display:block;
+								height: 40px;
+								margin:0 auto;
+							}
+							p{
+								font:700 15px/25px "";
+								color: #b8bcbf;
+								height:25px;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -310,7 +437,7 @@ main{
 		margin-top:60px;
 		
 		div.title{
-			background:url("http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png&Signature=7hi%2FnkZvs126YmFL0bzTgbBNM7s2QKTOejsPK%2F8C96E%3D&Expires=1544580727&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
+			background:url("http://nos.netease.com/dmall-mc/1-%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB.png4a3ef1f5-c862-4754-9a0f-017a80cc0a4f?download=1-%25E5%25B1%2585%25E5%25AE%25B6%25E7%2594%259F%25E6%25B4%25BB.png&Signature=WDX%2FCYPSXTwhnpBzG3TZAh57e9xBSQ5UPSiFUsxuw1E%3D&Expires=1544769431&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
 		}
 		
 		div.floor-banner{
@@ -393,13 +520,15 @@ main{
 	
 	div.home-model{
 		div.title{
-			background:url("http://nos.netease.com/dmall-mc/1-%E6%89%8B%E5%8A%9E%E6%A8%A1%E5%9E%8B.png11b625aa-dada-473e-8bc3-1e43a019bac3?download=1-%25E6%2589%258B%25E5%258A%259E%25E6%25A8%25A1%25E5%259E%258B.png&Signature=t%2Fy3pAra0ZonvK0jFY4MaYzxYqbf8AduytoaVsK7d7Y%3D&Expires=1544580727&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
+			background:url("http://nos.netease.com/dmall-mc/1-%E6%89%8B%E5%8A%9E%E6%A8%A1%E5%9E%8B.png11b625aa-dada-473e-8bc3-1e43a019bac3?download=1-%25E6%2589%258B%25E5%258A%259E%25E6%25A8%25A1%25E5%259E%258B.png&Signature=CusZ4M7ZAq2PnELsRFbsEO0euVlfrb4rUqHvah1fCqQ%3D&Expires=1544769431&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
+			background-position: 0 0;
+			background-size: auto 100%;
 		}
 	}
 	
 	div.home-digital{
 		div.title{
-			background:url("http://nos.netease.com/dmall-mc/1-%E6%95%B0%E7%A0%81%E5%A4%96%E8%AE%BE.png5d8bfebe-bece-44c4-a3f4-be30403ef5ee?download=1-%25E6%2595%25B0%25E7%25A0%2581%25E5%25A4%2596%25E8%25AE%25BE.png&Signature=Ln4J%2BZkp5PKGGtfmalVoMpoUTBW3%2Ff9XaaQYvR7%2BPco%3D&Expires=1544580727&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
+			background:url("http://nos.netease.com/dmall-mc/1-%E6%95%B0%E7%A0%81%E5%A4%96%E8%AE%BE.png5d8bfebe-bece-44c4-a3f4-be30403ef5ee?download=1-%25E6%2595%25B0%25E7%25A0%2581%25E5%25A4%2596%25E8%25AE%25BE.png&Signature=OmIsifFx6tApiaM2zii0c8%2F80WPGANqcEicu0IAlMgs%3D&Expires=1544769431&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
 			background-position: 0 0;
 			background-size: auto 100%;
 		}
@@ -407,7 +536,7 @@ main{
 	
 	div.home-pendant{
 		div.title{
-			background:url("http://nos.netease.com/dmall-mc/1-%E6%9C%8D%E9%A5%B0%E9%85%8D%E4%BB%B6.pngb8dc0880-7979-427a-8fc8-5d696867d074?download=1-%25E6%259C%258D%25E9%25A5%25B0%25E9%2585%258D%25E4%25BB%25B6.png&Signature=h91OUSUw2UssWqQfa9Bz8l9yMb0YTp4ZM4DeJLREAFA%3D&Expires=1544580727&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
+			background:url("http://nos.netease.com/dmall-mc/1-%E6%9C%8D%E9%A5%B0%E9%85%8D%E4%BB%B6.pngb8dc0880-7979-427a-8fc8-5d696867d074?download=1-%25E6%259C%258D%25E9%25A5%25B0%25E9%2585%258D%25E4%25BB%25B6.png&Signature=BZ9Lg2mf6Rvnw0XmVRTIsQLpkOJUquVieY%2BPjhP2p4g%3D&Expires=1544769431&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
 			background-position: 0 0;
 			background-size: auto 100%;
 		}
@@ -415,7 +544,7 @@ main{
 	
 	div.home-cloth{
 		div.title{
-			background:url("http://nos.netease.com/dmall-mc/1-%E6%9C%8D%E8%A3%85.png1064f21b-7d65-4e79-ab5a-0524dbb5cc63?download=1-%25E6%259C%258D%25E8%25A3%2585.png&Signature=kYXDz4jxrP7tEcsdkBYcz6LXvqJmFmFQRG8jUUn0BPM%3D&Expires=1544580727&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
+			background:url("http://nos.netease.com/dmall-mc/1-%E6%9C%8D%E8%A3%85.png1064f21b-7d65-4e79-ab5a-0524dbb5cc63?download=1-%25E6%259C%258D%25E8%25A3%2585.png&Signature=FMXVMaVcZGA%2Botk7ycWapVrxSTc7sJaZEG0tiIE%2B2BU%3D&Expires=1544769431&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
 			background-position: 0 0;
 			background-size: auto 100%;
 		}
@@ -424,7 +553,7 @@ main{
 	div.home-book{
 		padding-bottom: 100px;
 		div.title{
-			background:url("http://nos.netease.com/dmall-mc/1-%E5%9B%BE%E4%B9%A6%E6%96%87%E5%85%B7.png341cb902-0a26-4f46-9e06-97f673030b51?download=1-%25E5%259B%25BE%25E4%25B9%25A6%25E6%2596%2587%25E5%2585%25B7.png&Signature=970czMj%2FGrbL9Lmn4GxAx7Dsh1YDnZ8fXqz2Xs666MY%3D&Expires=1544580727&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
+			background:url("http://nos.netease.com/dmall-mc/1-%E5%9B%BE%E4%B9%A6%E6%96%87%E5%85%B7.png341cb902-0a26-4f46-9e06-97f673030b51?download=1-%25E5%259B%25BE%25E4%25B9%25A6%25E6%2596%2587%25E5%2585%25B7.png&Signature=4i6WeB2R1zEKyuKD7n6K%2FegqT1Q%2B6BNu2CbCXiZZv%2Fs%3D&Expires=1544769431&NOSAccessKeyId=f7ebc3b6afe94da983dd4eacd62195b7") no-repeat left;
 			background-position: 0 0;
 			background-size: auto 100%;
 		}

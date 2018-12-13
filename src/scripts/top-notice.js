@@ -1,4 +1,4 @@
-define(["top-notice"], function() {
+define(["test_b"], function() {
 	$(function() {
 		var index = 0;
 		var timer = setInterval(function() {
@@ -49,4 +49,4 @@ define(["top-notice"], function() {
 		})
 
 	})
-})
+});
